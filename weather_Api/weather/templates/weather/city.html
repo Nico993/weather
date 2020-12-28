@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>city</title>
+</head>
+<body>
+    <div>
+        <form action="{% url 'index'%}" method="post">
+            {% csrf_token%}
+            {{ form }}
+            <p></p>
+            <input type="submit">
+        </form>
+        <div>
+            <img src="http://openweathermap.org/img/w/{{icon}}.png" alt="image">
+            <h1>{{city}}</h1>
+            <h5>temperature: {{temperature}}°C</h5>
+            <h5>Fells Like: {{feels_like}}</h5>
+            <h5>Temp Max: {{temp_max}}</h5>
+            <h5>Temp Min: {{temp_min}}</h5>
+            <h5>Humidity: {{humidity}}</h5>
+            <h5>Description: {{description}}</h5>
+            <h4>{{country}}</h4>
+        </div>
+    </div>
+</body>
+</html>
