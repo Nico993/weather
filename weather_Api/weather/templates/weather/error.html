@@ -1,20 +1,27 @@
+{%extends "weather/form.html"%}
+{%block block1%}
+{%load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'weather/error.css'%}">
+    <link rel="stylesheet" href="{%static 'weather/form.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <title>ERROR</title>
 </head>
+{%endblock%}
 <body>
-    <div>
-        <form action="{% url 'index'%}" method="post">
-            {% csrf_token%}
-            {{ form }}
-            <p></p>
-            <input type="submit">
-        </form>
-        <h1>ERROR</h1>
-        <h3>City Dont Found</h3>
+    {%block block2%}
+    <div class = "container">
+        <h1 class = "title is-1 is-spaced animate__animated animate__shakeY">ERROR</h1>
+        <h3 class = "subtitle is-3 is-spaced animate__animated animate__shakeY">City Dont Found</h3>
     </div>
+    <div>
+        <img id = "gif" src="../../static/weather/images/sadcloud.gif" alt="">
+    </div>
+    {%endblock%}
 </body>
 </html>

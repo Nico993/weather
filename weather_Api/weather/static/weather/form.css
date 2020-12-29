@@ -1,0 +1,29 @@
+#principal{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    width:fit-content;
+    height:fit-content;
+    margin-top:10%;
+    animation-duration: 3s;
+}
+#sumbitbtn{
+    margin-top: 10%;
+    margin-bottom: 1%;
+}
+html{
+    background: #a8c0ff; 
+    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff); 
+    background: linear-gradient(to right, #3f2b96, #a8c0ff); 
+    overflow-y: hidden;
+}
+#wave{
+    position: absolute;
+    bottom: 80%;
+    width: 100%;
+}
+@media screen and (max-width: 600px){
+    #principal{
+        margin-top: 20%;
+    }
+
+}

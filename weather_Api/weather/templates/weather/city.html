@@ -1,29 +1,33 @@
+{%extends "weather/form.html"%}
+{%block block1%}
+{%load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'weather/city.css'%}">
+    <link rel="stylesheet" href="{% static 'weather/form.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <title>{{city}}</title>
 </head>
+{%endblock%}
 <body>
+    {%block block2%}
     <div>
-        <form action="{% url 'index'%}" method="post">
-            {% csrf_token%}
-            {{ form }}
-            <p></p>
-            <input type="submit">
-        </form>
-        <div>
-            <img src="http://openweathermap.org/img/w/{{icon}}.png" alt="image">
+        <div id = "card">
+            <img src="http://openweathermap.org/img/w/{{icon}}.png" alt="image" class = "animate__animated animate__wobble">
             <h1>{{city}}</h1>
-            <h5>temperature: {{temperature}}°C</h5>
-            <h5>Fells Like: {{feels_like}}</h5>
+            <h5>Temperature: {{temperature}}°C</h5>
+            <h5 id = "feels">Feels Like: {{feels_like}}</h5>
             <h5>Temp Max: {{temp_max}}</h5>
-            <h5>Temp Min: {{temp_min}}</h5>
+            <h5 id = "min">Temp Min: {{temp_min}}</h5>
             <h5>Humidity: {{humidity}}</h5>
-            <h5>Description: {{description}}</h5>
+            <h5 id = "desc">Description: {{description}}</h5>
             <h4>{{country}}</h4>
         </div>
     </div>
+    {%endblock%}
 </body>
 </html>

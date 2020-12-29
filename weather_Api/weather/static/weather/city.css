@@ -1,0 +1,42 @@
+#card{
+    background: #abbaab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: absolute;
+    width: 50%;
+    height: fit-content;
+    margin-top: 5%;
+    left: 25%;
+    border-radius: 40px;
+}
+h5{
+    font-size: medium;
+    color: black;
+}
+#feels, #min, #desc{
+    margin-left: 50%;
+}
+h1{
+    font-size: larger;
+    color: black;
+    position: absolute;
+    left: 30%;
+    top: 0;
+}
+h4{
+    font-size: larger;
+    color: black;
+    position: absolute;
+    left: 50%;
+    top: 0;
+
+}
+img{
+    width: 100px;
+    height: 100px;
+}
+@media screen and (max-width: 768px){
+    h4{
+        left: 70%;
+    }
+}

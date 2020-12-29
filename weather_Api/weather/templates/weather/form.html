@@ -1,0 +1,18 @@
+{%block block1%}
+{%endblock%}
+<body>
+    <div>
+        <div class = "container animate__animated animate__zoomIn" id = "principal">
+            <form action="{% url 'index'%}" method="post">
+                {% csrf_token%}
+                {{ form }}
+                <p></p>
+                <input type="submit" class = "button is-primary is-default is-rounded is-focused" id = "sumbitbtn">
+            </form>
+        </div>
+        <div id = "wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C34.71,221.53 271.49,-49.98 507.62,110.03 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: rgba(73, 168, 252, 0.322);"></path></svg></div>
+    </div>  
+    {%block block2%} 
+    {% endblock %} 
+</body>    
+

@@ -1,17 +1,24 @@
+{% extends "weather/form.html" %}
+{%block block1%}
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'weather/index.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+    <link rel="stylesheet" href="{%static 'weather/form.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <title>home</title>
 </head>
-<body>
-    <form action="{% url 'index'%}" method="post">
-        {% csrf_token%}
-        {{ form }}
-        <p></p>
-        <input type="submit">
-    </form>
-    
-</body>
+{%endblock%}
+    <body>
+        {%block block2%}
+           <img src="../../static/weather/images/sunset.jpg" alt="" class = "animate__animated animate__pulse" id = "sun">
+           <img src="../../static/weather/images/moon.jpg" alt="" class = "animate__animated animate__pulse" id = "moon">
+
+        {%endblock%}
+
+    </body>
 </html>

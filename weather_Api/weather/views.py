@@ -20,7 +20,7 @@ def index(request):
             else:
                 context = {
                     "form": cityForm(),
-                    "city": cityName,
+                    "city": cityName.capitalize(),
                     "temperature": data["main"]["temp"],
                     "feels_like": data["main"]["feels_like"],
                     "temp_max": data["main"]["temp_max"],
